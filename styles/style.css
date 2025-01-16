@@ -1,0 +1,175 @@
+/* General Styling */
+body {
+    font-family: Arial, sans-serif;
+    margin: 0;
+    padding: 0;
+    background-color: #f5f7fa;
+    color: #333;
+  }
+  
+  header {
+    background-color: #00467f;
+    color: white;
+    text-align: center;
+    padding: 10px;
+  }
+  
+  header .profile {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    gap: 10px;
+  }
+  
+  header .profile img {
+    width: 50px;
+    height: 50px;
+    border-radius: 50%;
+  }
+  
+  header .profile h1 {
+    font-size: 1.5rem;
+    margin: 0;
+  }
+  
+  nav ul {
+    list-style: none;
+    padding: 0;
+    margin: 0;
+    display: flex;
+    justify-content: center;
+    background-color: #111;
+  }
+  
+  nav ul li {
+    margin: 0 10px;
+  }
+  
+  nav ul li a {
+    color: white;
+    text-decoration: none;
+    padding: 5px 15px;
+    display: inline-block;
+  }
+  
+  nav ul li a.active {
+    background-color: #ffcc00;
+    color: black;
+    border-radius: 5px;
+  }
+  
+  main {
+    display: grid;
+    grid-template-columns: repeat(2, 1fr);
+    gap: 20px;
+    padding: 20px;
+  }
+  
+  main section {
+    background: white;
+    border-radius: 8px;
+    box-shadow: 0 2px 4px rgba(0, 0, 0, 0.1);
+    padding: 15px;
+  }
+  
+  .course-work, .location {
+    padding: 20px;
+  }
+  
+  .course-work h2, .location h2, .certificate h2 {
+    font-size: 1.2rem;
+    margin-bottom: 10px;
+    color: #00467f;
+    text-align: center;
+    border-bottom: 2px solid #00467f;
+    padding-bottom: 5px;
+  }
+  
+  .course-work ul {
+    list-style: none;
+    padding: 0;
+  }
+  
+  .location img {
+    width: 100%;
+    border-radius: 5px;
+    margin-top: 10px;
+  }
+  
+  .location p {
+    text-align: center;
+    font-style: italic;
+    margin: 5px 0;
+  }
+  
+  /* Certificate Section */
+  .certificate {
+    grid-column: span 2;
+    text-align: center;
+  }
+  
+  .certificate .filters {
+    display: flex;
+    justify-content: center;
+    gap: 10px;
+    margin-bottom: 15px;
+  }
+  
+  .certificate .filters button {
+    background-color: #00467f;
+    color: white;
+    border: none;
+    border-radius: 5px;
+    padding: 5px 10px;
+    cursor: pointer;
+    font-size: 0.9rem;
+  }
+  
+  .certificate .filters button:hover {
+    background-color: #003b6b;
+  }
+  
+  .certificate .courses {
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: center;
+    gap: 10px;
+  }
+  
+  .certificate .course-card {
+    background-color: #8b4513;
+    color: white;
+    border-radius: 5px;
+    padding: 10px;
+    width: 100px;
+    text-align: center;
+  }
+  
+  .certificate .course-card.completed {
+    background-color: #00467f;
+  }
+  
+  /* Footer Styling */
+  footer {
+    background-color: #00467f;
+    color: white;
+    text-align: center;
+    padding: 10px;
+    margin-top: 20px;
+  }
+  
+  footer p {
+    margin: 5px 0;
+  }
+  
+  /* Responsive Styling */
+  @media (max-width: 768px) {
+    main {
+      grid-template-columns: 1fr;
+    }
+  
+    .certificate {
+      grid-column: span 1;
+    }
+  }
+  

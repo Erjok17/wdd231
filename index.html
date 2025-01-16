@@ -1,0 +1,58 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <meta name="description" content="Course home page for WDD 231.">
+  <meta name="author" content="Erjok Agot Erjok">
+  <title>Course Home Page</title>
+  <link rel="stylesheet" href="styles/style.css">
+  <script src="scripts/main.js" defer></script>
+</head>
+<body>
+  <header>
+    <div class="profile">
+      <img src="images/lisa.png" alt="Profile Picture">
+      <h1>Erjok Agot Erjok</h1>
+    </div>
+    <nav>
+      <ul>
+        <li><a href="#" class="active">Home</a></li>
+        <li><a href="#">Chamber</a></li>
+        <li><a href="https://github.com/Erjok17">GitHub Profile</a></li>
+        <li><a href="https://linkedin.com/in/erjokagot">LinkedIn</a></li>
+      </ul>
+    </nav>
+  </header>
+  <main>
+    <section class="course-work">
+      <h2>Course Work</h2>
+      <ul>
+        <li>W01 Assignment: Course Home Page</li>
+        <li>W02 Assignment: Chamber of Commerce Directory Page</li>
+        <li>W03 Assignment: Chamber Home Page </li>
+      </ul>
+    </section>
+    <section class="location">
+      <h2>Juba, South Sudan</h2>
+      <img src="images/hero-small.webp" alt="Eagle">
+      <p>The SDD Eagle</p>
+    </section>
+    <section class="certificate">
+      <h2>Web and Computer Programming Certificate</h2>
+      <div class="filters">
+        <button id="filter-all">All</button>
+        <button id="filter-cse">CSE</button>
+        <button id="filter-wdd">WDD</button>
+      </div>
+      <div class="courses">
+        <!-- Course cards dynamically generated here -->
+      </div>
+    </section>
+  </main>
+  <footer>
+    <p>&copy; <span id="currentyear"></span> Erjok Agot Erjok &#127464;&#127486;</p>
+    <p id="lastModified"></p>
+  </footer>
+</body>
+</html>
