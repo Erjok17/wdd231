@@ -1,0 +1,18 @@
+[
+    {
+        "name": "Peace's Retail Shop",
+        "address": "123 Madiba St, Nalyaa Estate",
+        "phone": "0740306776",
+        "website": "https://peaceretail.com",
+        "image": "images/peace2.jpg",
+        "membership": "Gold"
+    },
+    {
+        "name": "Noah's Collections",
+        "address": "456 Shrine Rd, Nalyaa Estate",
+        "phone": "0780306976",
+        "website": "https://noahcollection.com",
+        "image": "images/noah.jpg",
+        "membership": "Silver"
+    }
+]
