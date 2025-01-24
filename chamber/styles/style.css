@@ -87,3 +87,12 @@ footer {
     background-color: #00457c;
     color: white;
 }
+
+/* Logo Styling */
+header .logo {
+    display: block;
+    margin: 0 auto;
+    max-width: 150px; /* Adjust size as needed */
+    height: auto;
+    padding-bottom: 10px; /* Add spacing below the logo */
+}
