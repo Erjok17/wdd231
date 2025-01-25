@@ -1,0 +1,85 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta name="description" content="Welcome to Nalyaa Estate Chamber of Commerce. Discover local businesses, events, and opportunities to connect and grow together.">
+    <meta name="author" content="Erjok Agot Erjok">
+
+    <!-- Social Media Meta -->
+    <meta property="og:title" content="Nalyaa Estate Chamber of Commerce">
+    <meta property="og:type" content="website">
+    <meta property="og:image" content="images/hero.jpg">
+    <meta property="og:url" content="https://erjok17.github.io/wdd231/chamber/index.html">
+
+    <title>Nalyaa Estate Chamber of Commerce - Home</title>
+    <link rel="icon" href="images/favicon.ico">
+    <link rel="stylesheet" href="styles/normalize.css">
+    <link rel="stylesheet" href="styles/style.css">
+    <script src="scripts/script.js" defer></script>
+    <script src="scripts/weather.js" defer></script>
+
+</head>
+
+<body>
+    <header>
+        <h1>Nalyaa Estate Chamber of Commerce</h1>
+        <img src="images/Preview.png" alt="Nalyaa Estate Chamber of Commerce Logo" class="logo">
+        <nav>
+            <ul class="navigation">
+                <li><a href="index.html" class="active">Home</a></li>
+                <li><a href="discover.html">Discover</a></li>
+                <li><a href="directory.html">Directory</a></li>
+                <li><a href="join.html">Join</a></li>
+            </ul>
+        </nav>
+    </header>
+
+    <main>
+        <!-- Hero Section -->
+        <section class="hero">
+            <img src="images/Carrefour-1.webp" alt="Community Image" class="hero-image">
+            <div class="hero-text">
+                <h2>Welcome to Nalyaa Estate</h2>
+                <p>Connecting businesses, fostering growth, and enriching the community.</p>
+                <a href="join.html" class="cta-button">Join the Chamber</a>
+            </div>
+        </section>
+
+        <!-- Current Events Section -->
+        <section class="events">
+            <h2>Current Events</h2>
+            <ul>
+                <li>Business Networking Night - January 30, 2025</li>
+                <li>Community Cleanup Drive - February 15, 2025</li>
+                <li>Annual General Meeting - March 10, 2025</li>
+            </ul>
+        </section>
+
+        <!-- Weather Section -->
+        <h2>Weather in Kampala</h2>
+      <p>The current temperature in Kampala, Uganda is <span id="current-temp">Loading...</span></p>
+      <figure>
+        <img id="weather-icon" src="" alt="Weather icon">
+        <figcaption id="weather-caption">Loading...</figcaption>
+      </figure>
+        </section>
+
+        <!-- Member Spotlights Section -->
+        <section class="spotlights">
+            <h2>Featured Members</h2>
+            <div id="spotlight-cards">
+                <!-- Spotlight cards will load dynamically -->
+            </div>
+        </section>
+    </main>
+
+    <footer>
+        <p>&copy; <span id="year"></span> Nalyaa Estate Chamber of Commerce. All rights reserved.</p>
+        <p>Erjok Agot Erjok | WDD 231</p>
+        <p>Last Updated: <span id="last-modified"></span></p>
+    </footer>
+</body>
+
+</html>
