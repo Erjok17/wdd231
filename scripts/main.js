@@ -39,3 +39,36 @@ document.getElementById("filter-wdd").addEventListener("click", () => displayCou
 
 // Initial display of all courses
 displayCourses();
+
+// Dialog logic
+const dialog = document.getElementById("courseDialog");
+const dialogCloseBtn = document.getElementById("dialogClose");
+const courseCards = document.querySelectorAll(".course-card");
+
+// Show dialog on course card click
+function openDialog(course) {
+  dialog.querySelector("#dialogContent").innerHTML = `
+    <h3>${course.id}</h3>
+    <p>${course.title}</p>
+    <p>${course.credits} Credits</p>
+    <p>Type: ${course.type}</p>
+    <p>Completed: ${course.completed ? "Yes" : "No"}</p>
+  `;
+  dialog.showModal();
+}
+
+// Close dialog
+dialogCloseBtn.addEventListener("click", () => dialog.close());
+
+// Add click listeners dynamically to course cards
+function addCardEventListeners() {
+  const courseCards = document.querySelectorAll(".course-card");
+  courseCards.forEach((card, index) => {
+    card.addEventListener("click", () => openDialog(courses[index]));
+  });
+}
+
+// Update event listeners after displaying courses
+displayCourses();
+addCardEventListeners();
+
