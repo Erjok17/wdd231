@@ -1,6 +1,6 @@
 /* Styles specifically for join.html */
 
-/* Center the form container */
+/* css to Center the form container */
 main {
     max-width: 600px;
     margin: 20px auto;
@@ -10,7 +10,7 @@ main {
     box-shadow: 0 0 10px rgba(0, 0, 0, 0.1);
 }
 
-/* Style form elements */
+/* Style form  */
 form {
     display: flex;
     flex-direction: column;
