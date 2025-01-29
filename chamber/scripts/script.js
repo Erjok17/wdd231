@@ -33,3 +33,8 @@ document.getElementById('last-modified').textContent = document.lastModified;
 
 // Initialize Directory
 loadDirectory();
+
+
+document.getElementById("timestamp").value = new Date().toISOString();
+document.getElementById("year").textContent = new Date().getFullYear();
+document.getElementById("last-modified").textContent = document.lastModified;
