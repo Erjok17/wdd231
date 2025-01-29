@@ -55,3 +55,12 @@ footer {
     color: white;
     margin-top: 20px;
 }
+
+.join-us-banner {
+    width: 80%; /* Make it responsive */
+    max-width: 400px; /* Set a max width */
+    display: block; /* Remove extra spacing */
+    margin: 20px auto; /* Center horizontally */
+    border-radius: 10px; /* Add rounded corners */
+    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.2); /* Add shadow effect */
+}
