@@ -40,14 +40,14 @@
     <main>
         <h2>Membership Application</h2>
         <form method="get" action="thankyou.html">
-            <label>First Name: <input type="text" name="firstName" required></label>
-            <label>Last Name: <input type="text" name="lastName" required></label>
-            <label>Email: <input type="email" name="email" required></label>
-            <label>Phone Number: <input type="tel" name="phone" required></label>
-            <label>Business/Organization Name: <input type="text" name="organization" required></label>
+            <label for="firstName">First Name: <input type="text" id="firstName" name="firstName" required></label>
+            <label for="lastName">Last Name: <input type="text" id="lastName" name="lastName" required></label>
+            <label for="email">Email: <input type="email" id="email" name="email" required></label>
+            <label for="phone">Phone Number: <input type="tel" id="phone" name="phone" required></label>
+            <label for="organization">Business/Organization Name: <input type="text" id="organization" name="organization" required></label>
             
-            <label>Membership Level:
-                <select name="membership">
+            <label for="membership">Membership Level:
+                <select name="membership" id="membership">
                     <option value="np">NP Membership (Non-Profit) - Free</option>
                     <option value="bronze">Bronze Membership</option>
                     <option value="silver">Silver Membership</option>
@@ -55,13 +55,14 @@
                 </select>
             </label>
 
-            <label>Business Description:
-                <textarea name="description"></textarea>
+            <label for="description">Business Description:
+                <textarea name="description" id="description"></textarea>
             </label>
 
             <input type="hidden" name="timestamp" id="timestamp">
             <button type="submit">Submit Application</button>
         </form>
+
 
         
     </main>
