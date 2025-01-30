@@ -12,104 +12,183 @@ body {
 header {
     background-color: #00457c;
     color: #fff;
-    padding: 1rem 0;
+    padding: 0.5rem 0; 
     text-align: center;
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    padding: 0.5rem 2rem;
 }
 
 header h1 {
+    font-size: 1.8rem;
     margin: 0;
-    font-size: 2rem;
+}
+
+/* Navigation */
+nav {
+    background-color: transparent; 
 }
 
 nav ul {
     list-style: none;
     padding: 0;
+    margin: 0;
+    display: flex;
+    justify-content: center;
+    gap: 15px;
 }
 
 nav ul li {
     display: inline;
-    margin: 0 10px;
 }
 
 nav ul li a {
-    color: #fff;
+    color: white;
+    font-size: 1rem;
+    font-weight: bold;
     text-decoration: none;
+    padding: 8px 12px;
+    border-radius: 5px;
+    transition: background 0.3s;
 }
 
-nav ul li a.active {
-    text-decoration: underline;
+nav ul li a:hover, nav ul li a.active {
+    background: #f8b400; /* Highlight active page */
+    color: #000;
 }
 
-/* Main Content */
-main {
-    padding: 1rem;
+/* Logo */
+header .logo {
+    max-width: 100px; /* Reduce logo size */
+    height: auto;
 }
 
-/* View Toggle */
-.view-toggle {
-    text-align: center;
-    margin-bottom: 1rem;
-}
-
-.view-toggle button {
-    padding: 0.5rem 1rem;
-    margin: 0 5px;
+/* Hamburger Menu */
+.hamburger {
+    font-size: 2rem;
+    background: none;
     border: none;
-    background-color: #00457c;
     color: white;
     cursor: pointer;
-    border-radius: 5px;
+    position: absolute;
+    left: 10px;
+    top: 10px;
+    display: none;
 }
 
-.view-toggle button:hover {
-    background-color: #003366;
+/* Mobile Navigation */
+@media screen and (max-width: 768px) {
+    .hamburger {
+        display: block;
+    }
+
+    .navigation {
+        display: none;
+        flex-direction: column;
+        background: #00457c;
+        position: absolute;
+        width: 100%;
+        left: 0;
+        top: 60px;
+    }
+
+    .navigation.show {
+        display: flex;
+    }
 }
 
-/* Directory Grid */
-#directory {
-    display: grid;
-    grid-template-columns: repeat(auto-fit, minmax(250px, 1fr));
-    gap: 1rem;
-}
-
-.card {
-    border: 1px solid #ccc;
-    padding: 1rem;
-    border-radius: 5px;
-    background: white;
+/* Hero Section */
+.hero {
+    position: relative;
     text-align: center;
-}
-
-/* Footer */
-footer {
-    text-align: center;
-    padding: 1rem;
-    background-color: #00457c;
     color: white;
+    max-height: 400px; 
+    overflow: hidden;
 }
 
-/* Logo Styling */
-header .logo {
-    display: block;
-    margin: 0 auto;
-    max-width: 150px; /* Adjust size as needed */
-    height: auto;
-    padding-bottom: 10px; /* Add spacing below the logo */
+.hero img.hero-image {
+    width: 100%;
+    max-height: 400px;
+    object-fit: cover; /* Ensures the image covers the section without distortion */
+    opacity: 0.85; /* Slightly dim the image to make text stand out */
 }
 
-#weather {
-    text-align: center;
-    background-color: #e6f7ff;
+/* Hero Text */
+.hero .hero-text {
+    position: absolute;
+    top: 50%;
+    left: 50%;
+    transform: translate(-50%, -50%);
+    background: rgba(0, 0, 0, 0.6); /* Semi-transparent background for better readability */
     padding: 1rem;
     border-radius: 10px;
-    margin: 1rem 0;
+    width: 80%;
 }
 
-#weather img {
-    display: block;
-    margin: 0.5rem auto;
-    max-width: 100px;
+.hero .hero-text h2 {
+    font-size: 2rem;
+    margin-bottom: 0.5rem;
 }
 
+.hero .hero-text p {
+    font-size: 1.2rem;
+}
 
+/* CTA Button */
+.cta-button {
+    display: inline-block;
+    padding: 0.7rem 1.5rem;
+    background-color: #f8b400; /* Bright color for contrast */
+    color: #000;
+    text-decoration: none;
+    font-weight: bold;
+    border-radius: 5px;
+    transition: background 0.3s ease-in-out;
+}
 
+.cta-button:hover {
+    background-color: #ffcc00;
+}
+
+/* Navigation Bar */
+nav {
+    background-color: #00457c;
+    padding: 0.8rem 0;
+    text-align: center;
+}
+
+nav ul {
+    padding: 0;
+    margin: 0;
+    list-style: none;
+}
+
+nav ul li {
+    display: inline;
+    margin: 0 15px;
+}
+
+nav ul li a {
+    color: white;
+    font-size: 1.1rem;
+    font-weight: bold;
+    text-decoration: none;
+    padding: 10px 15px;
+    border-radius: 5px;
+    transition: background 0.3s;
+}
+
+nav ul li a:hover, nav ul li a.active {
+    background: #f8b400; /* Highlight active page */
+    color: #000;
+}
+
+/* Footer styling */
+footer {
+    text-align: center;
+    padding: 15px;
+    background-color: #005f73;
+    color: white;
+    margin-top: 20px;
+}

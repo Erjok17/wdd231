@@ -28,6 +28,8 @@ document.getElementById('list-view').addEventListener('click', () => {
 });
 
 // Footer Updates
+
+
 document.getElementById('year').textContent = new Date().getFullYear();
 document.getElementById('last-modified').textContent = document.lastModified;
 
@@ -38,3 +40,8 @@ loadDirectory();
 document.getElementById("timestamp").value = new Date().toISOString();
 document.getElementById("year").textContent = new Date().getFullYear();
 document.getElementById("last-modified").textContent = document.lastModified;
+
+
+document.getElementById("menu-toggle").addEventListener("click", function () {
+    document.querySelector(".navigation").classList.toggle("show");
+});

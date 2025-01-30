@@ -7,23 +7,17 @@
     <meta name="description" content="Welcome to Nalyaa Estate Chamber of Commerce. Discover local businesses, events, and opportunities to connect and grow together.">
     <meta name="author" content="Erjok Agot Erjok">
 
-    <!-- Social Media Meta -->
-    <meta property="og:title" content="Nalyaa Estate Chamber of Commerce">
-    <meta property="og:type" content="website">
-    <meta property="og:image" content="https://erjok17.github.io/wdd231/chamber/images/hero.png">
-    <meta property="og:url" content="https://erjok17.github.io/wdd231/chamber/index.html">
-
     <title>Nalyaa Estate Chamber of Commerce - Home</title>
     <link rel="icon" href="images/favicon.ico">
     <link rel="stylesheet" href="styles/normalize.css">
     <link rel="stylesheet" href="styles/style.css">
-    <script src="scripts/script.js" defer></script>
-    <script src="scripts/weather.js" defer></script>
+    
 
 </head>
 
 <body>
     <header>
+        <button id="menu-toggle" class="hamburger">&#9776;</button>
         <h1>Nalyaa Estate Chamber of Commerce</h1>
         <img src="images/Preview.png" alt="Nalyaa Estate Chamber of Commerce Logo" class="logo">
         <nav>
@@ -37,7 +31,6 @@
     </header>
 
     <main>
-        <!-- Hero Section -->
         <section class="hero">
             <img src="images/hero.png" alt="Community Image" class="hero-image">
             <div class="hero-text">
@@ -47,7 +40,6 @@
             </div>
         </section>
 
-        <!-- Current Events Section -->
         <section class="events">
             <h2>Current Events</h2>
             <ul>
@@ -57,17 +49,15 @@
             </ul>
         </section>
 
-        <!-- Weather Section -->
-         <section class="weather">
-        <h2>Weather in Kampala</h2>
-      <p>The current temperature in Kampala, Uganda is <span id="current-temp">Loading...</span></p>
-      <figure>
-        <img id="weather-icon" src="weather-icon.png" alt="Weather icon">
-        <figcaption id="weather-caption">Loading...</figcaption>
-      </figure>
+        <section class="weather">
+            <h2>Weather in Kampala</h2>
+            <p>The current temperature in Kampala, Uganda is <span id="current-temp">Loading...</span></p>
+            <figure>
+                <img id="weather-icon" src="weather-icon.png" alt="Weather icon">
+                <figcaption id="weather-caption">Loading...</figcaption>
+            </figure>
         </section>
 
-        <!-- Member Spotlights Section -->
         <section class="spotlights">
             <h2>Featured Members</h2>
             <div id="spotlight-cards">
@@ -81,6 +71,13 @@
         <p>Erjok Agot Erjok | WDD 231</p>
         <p>Last Updated: <span id="last-modified"></span></p>
     </footer>
+
+    <script src="scripts/script.js" defer></script>
+    <script src="scripts/weather.js" defer></script>
+    <script src="scripts/spotlight.js" defer></script>
+    <script src="scripts/script.js"></script>
+
+
 </body>
 
 </html>
