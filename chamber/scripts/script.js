@@ -18,30 +18,14 @@ async function loadDirectory() {
     });
 }
 
-// Toggle Views
-document.getElementById('grid-view').addEventListener('click', () => {
-    document.getElementById('directory').classList.remove('list');
-});
-
-document.getElementById('list-view').addEventListener('click', () => {
-    document.getElementById('directory').classList.add('list');
-});
-
 // Footer Updates
-
-
 document.getElementById('year').textContent = new Date().getFullYear();
 document.getElementById('last-modified').textContent = document.lastModified;
 
-// Initialize Directory
-loadDirectory();
-
-
+// Set Timestamp for Form Submission
 document.getElementById("timestamp").value = new Date().toISOString();
-document.getElementById("year").textContent = new Date().getFullYear();
-document.getElementById("last-modified").textContent = document.lastModified;
 
-
+// Toggle Navigation Menu
 document.getElementById("menu-toggle").addEventListener("click", function () {
     document.querySelector(".navigation").classList.toggle("show");
 });
