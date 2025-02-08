@@ -17,6 +17,9 @@
     <link rel="stylesheet" href="styles/normalize.css">
     <link rel="stylesheet" href="styles/style.css">
     <link rel="stylesheet" href="styles/join.css">
+    
+    
+    
 </head>
 
 <body>
@@ -38,6 +41,11 @@
     <main>
         <h1>Join Nalyaa Estate Chamber - Membership Application</h1>
         <form method="get" action="thankyou.html">
+
+            <label for="title">Title: 
+                <input type="text" id="title" name="title" required pattern="[A-Za-z\s-]{7,}">
+            </label>
+            
             <label for="firstName">First Name: 
                 <input type="text" id="firstName" name="firstName" required>
             </label>
@@ -47,8 +55,9 @@
             </label>
             
             <label for="email">Email: 
-                <input type="email" id="email" name="email" required>
+                <input type="email" id="email" name="email" required placeholder="example@email.com">
             </label>
+            
             
             <label for="phone">Phone Number: 
                 <input type="tel" id="phone" name="phone" required>
@@ -75,6 +84,47 @@
                 </select>
             </label>
     
+        
+                    <!-- Membership Benefit Buttons -->
+                    <button type="button" onclick="openModal('np')">Non-Profit Membership Benefits</button>
+                    <button type="button" onclick="openModal('bronze')">Bronze Membership Benefits</button>
+                    <button type="button" onclick="openModal('silver')">Silver Membership Benefits</button>
+                    <button type="button" onclick="openModal('gold')">Gold Membership Benefits</button>
+            
+                    <!-- Membership Modals -->
+                    <div id="np-modal" class="modal">
+                        <div class="modal-content">
+                            <span class="close" onclick="closeModal('np')">&times;</span>
+                            <h2>Non-Profit Membership Benefits</h2>
+                            <p>Free access to community events, networking with local businesses, and eligibility for grants.</p>
+                        </div>
+                    </div>
+            
+                    <div id="bronze-modal" class="modal">
+                        <div class="modal-content">
+                            <span class="close" onclick="closeModal('bronze')">&times;</span>
+                            <h2>Bronze Membership Benefits</h2>
+                            <p>Basic business listing, access to business workshops, and participation in local events.</p>
+                        </div>
+                    </div>
+            
+                    <div id="silver-modal" class="modal">
+                        <div class="modal-content">
+                            <span class="close" onclick="closeModal('silver')">&times;</span>
+                            <h2>Silver Membership Benefits</h2>
+                            <p>Enhanced business listing, priority networking opportunities, and advertising discounts.</p>
+                        </div>
+                    </div>
+            
+                    <div id="gold-modal" class="modal">
+                        <div class="modal-content">
+                            <span class="close" onclick="closeModal('gold')">&times;</span>
+                            <h2>Gold Membership Benefits</h2>
+                            <p>Exclusive networking events, premium advertising, and VIP access to chamber events.</p>
+                        </div>
+                    </div>
+
+
             <label for="description">Business Description:
                 <textarea name="description" id="description"></textarea>
             </label>
@@ -89,7 +139,6 @@
         <p>Erjok Agot Erjok | WDD 231</p>
         <p>Last Updated: <span id="last-modified"></span></p>
     </footer>
-
     <script src="scripts/script.js"></script>
 </body>
 

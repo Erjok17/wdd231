@@ -29,7 +29,41 @@ document.addEventListener("DOMContentLoaded", function () {
     }
 });
 
+const params = new URLSearchParams(window.location.search);
+    document.getElementById("user-name").textContent = params.get("firstName") + " " + params.get("lastName");
+    document.getElementById("user-email").textContent = params.get("email");
+    document.getElementById("user-phone").textContent = params.get("phone");
+    document.getElementById("user-organization").textContent = params.get("organization");
+    document.getElementById("timestamp-display").textContent = params.get("timestamp");
+    
 
+    function openModal(level) {
+        let modal = document.getElementById(level + "-modal");
+        if (modal) {
+            modal.style.display = "block";
+        } else {
+            console.error("Modal not found for level:", level);
+        }
+    }
+    
+    function closeModal(level) {
+        let modal = document.getElementById(level + "-modal");
+        if (modal) {
+            modal.style.display = "none";
+        }
+    }
+    
+    // Close modal when clicking outside of it
+    window.onclick = function(event) {
+        let modals = document.querySelectorAll('.modal');
+        modals.forEach(modal => {
+            if (event.target === modal) {
+                modal.style.display = "none";
+            }
+        });
+    };
+    
+    
 
 
 // Footer Updates
