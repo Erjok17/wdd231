@@ -18,6 +18,17 @@ async function loadDirectory() {
     });
 }
 
+document.addEventListener("DOMContentLoaded", function () {
+    const menuToggle = document.getElementById("menu-toggle");
+    const navigation = document.querySelector(".navigation");
+
+    if (menuToggle) {
+        menuToggle.addEventListener("click", function () {
+            navigation.classList.toggle("active");
+        });
+    }
+});
+
 
 
 
