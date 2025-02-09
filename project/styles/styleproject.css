@@ -1,3 +1,7 @@
+
+@import url('https://fonts.googleapis.com/css2?family=Montserrat:wght@400;700&family=Roboto:wght@400;700&display=swap');
+
+
 body {
     font-family: 'Roboto', sans-serif;
     background-color: #F5F5F5;
@@ -32,9 +36,22 @@ ul {
     padding-left: 20px;
 }
 
+
 img {
-    width: 100%;
-    max-width: 600px;
+    width: 80%; /* Adjust to fit within the section */
+    max-width: 200px; /* Set a reasonable max width */
     display: block;
     margin: 10px auto;
+}
+
+.wireframes {
+    display: flex;
+    justify-content: space-between; /* Distributes images to left and right */
+    align-items: center; /* Aligns them vertically */
+    gap: 20px; /* Adds spacing between the images */
+}
+
+.wireframes img {
+    width: 45%; /* Adjusts image size so they fit well */
+    max-width: 200px; /* Prevents them from becoming too large */
 }
