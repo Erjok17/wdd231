@@ -1,79 +1,57 @@
-// Load JSON Data and Render Cards
-async function loadDirectory() {
-    const response = await fetch('data/members.json');
-    const members = await response.json();
-    const directory = document.getElementById('directory');
-
-    members.forEach(member => {
-        const card = document.createElement('div');
-        card.className = 'card';
-        card.innerHTML = `
-            <img src="${member.image}" alt="${member.name}">
-            <h3>${member.name}</h3>
-            <p>${member.address}</p>
-            <p>Phone: ${member.phone}</p>
-            <a href="${member.website}" target="_blank">Visit Website</a>
-        `;
-        directory.appendChild(card);
-    });
-}
-
+// Ensure JavaScript runs only after the DOM is fully loaded
 document.addEventListener("DOMContentLoaded", function () {
+
+    /*** 🟢 HAMBURGER MENU FUNCTIONALITY 🟢 ***/
     const menuToggle = document.getElementById("menu-toggle");
     const navigation = document.querySelector(".navigation");
 
-    if (menuToggle) {
+    if (menuToggle && navigation) {
         menuToggle.addEventListener("click", function () {
             navigation.classList.toggle("active");
         });
+    } else {
+        console.error("Menu toggle button or navigation not found.");
     }
-});
 
-const params = new URLSearchParams(window.location.search);
-    document.getElementById("user-name").textContent = params.get("firstName") + " " + params.get("lastName");
-    document.getElementById("user-email").textContent = params.get("email");
-    document.getElementById("user-phone").textContent = params.get("phone");
-    document.getElementById("user-organization").textContent = params.get("organization");
-    document.getElementById("timestamp-display").textContent = params.get("timestamp");
-    
+    /*** 🟢 FOOTER YEAR & LAST MODIFIED UPDATE 🟢 ***/
+    const yearEl = document.getElementById("year");
+    const lastModifiedEl = document.getElementById("last-modified");
 
-    function openModal(level) {
-        let modal = document.getElementById(level + "-modal");
-        if (modal) {
-            modal.style.display = "block";
-        } else {
-            console.error("Modal not found for level:", level);
-        }
-    }
-    
-    function closeModal(level) {
-        let modal = document.getElementById(level + "-modal");
-        if (modal) {
-            modal.style.display = "none";
-        }
-    }
-    
-    // Close modal when clicking outside of it
-    window.onclick = function(event) {
-        let modals = document.querySelectorAll('.modal');
-        modals.forEach(modal => {
-            if (event.target === modal) {
-                modal.style.display = "none";
+    if (yearEl) yearEl.textContent = new Date().getFullYear();
+    if (lastModifiedEl) lastModifiedEl.textContent = document.lastModified;
+
+    /*** 🟢 DIRECTORY JSON DATA LOADING 🟢 ***/
+    async function loadDirectory() {
+        try {
+            const response = await fetch('data/members.json');
+            if (!response.ok) throw new Error("Failed to load directory data");
+            const members = await response.json();
+            const directory = document.getElementById('directory');
+
+            if (directory) {
+                directory.innerHTML = ""; // Clear previous content
+                members.forEach(member => {
+                    const card = document.createElement('div');
+                    card.className = 'card';
+                    card.innerHTML = `
+                        <img src="${member.image}" alt="${member.name}">
+                        <h3>${member.name}</h3>
+                        <p>${member.address}</p>
+                        <p>Phone: ${member.phone}</p>
+                        <a href="${member.website}" target="_blank">Visit Website</a>
+                    `;
+                    directory.appendChild(card);
+                });
+            } else {
+                console.error("Directory element not found.");
             }
-        });
-    };
-    
-    
+        } catch (error) {
+            console.error("Error loading directory:", error);
+        }
+    }
 
-
-// Footer Updates
-document.getElementById('year').textContent = new Date().getFullYear();
-document.getElementById('last-modified').textContent = document.lastModified;
-
-// Set Timestamp for Form Submission
-document.getElementById("timestamp").value = new Date().toISOString();
-
-// Toggle Navigation Menu
-document.getElementById("menu-toggle").addEventListener("click", function () {
-    document.querySelector(".navigation").classList.toggle("show");
+    // Load directory data if the element exists on the page
+    if (document.getElementById('directory')) {
+        loadDirectory();
+    }
 });
