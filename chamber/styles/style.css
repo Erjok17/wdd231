@@ -1,6 +1,6 @@
 /* style.css */
 
-/* General Reset */
+/* 🔹 General Reset */
 body {
     font-family: Arial, sans-serif;
     margin: 0;
@@ -10,38 +10,25 @@ body {
     background-color: #f9f9f9;
 }
 
-/* Header */
+/* 🔹 Header Styling */
 header {
     background-color: #00457c;
     color: #fff;
     display: flex;
-    justify-content: center; /* Centers title & logo */
+    justify-content: space-between;
     align-items: center;
-    flex-direction: column; /* Stack items */
+    padding: 1rem 2rem;
+    position: relative; /* Allow absolute elements inside */
     text-align: center;
-    padding: 80px 20px 20px; /* Adds extra top padding */
-    position: relative; /* Ensures elements inside position correctly */
 }
 
+/* 🔹 Title Styling */
 header h1 {
     font-size: 1.8rem;
-    margin: 10px 0 0; /* Adjust spacing to avoid overlap */
+    margin: 0;
 }
 
-/* this is to Fix Hamburger Menu Overlap  */
-#menu-toggle {
-    position: absolute;
-    top: 20px;
-    left: 15px;
-    font-size: 30px;
-    background: none;
-    border: none;
-    cursor: pointer;
-    color: white;
-    z-index: 1100;
-}
-
-/* Navigation */
+/* 🔹 Navigation Styling */
 nav ul {
     list-style: none;
     padding: 0;
@@ -65,12 +52,33 @@ nav ul li a:hover, nav ul li a.active {
     color: #000;
 }
 
-/* Logo */
+/* 🔹 Logo */
 header .logo {
     max-width: 100px;
     height: auto;
 }
 
+/* 🔹 Ensure Header Doesn't Overlap Content */
+header {
+    position: relative; /* Allow elements inside */
+    text-align: center;
+    padding: 60px 20px; /* Increased padding for spacing */
+}
+
+/* 🔹 Hamburger Menu (Only on Mobile) */
+.hamburger {
+    position: absolute;
+    top: 20px;
+    left: 15px;
+    font-size: 30px;
+    background: none;
+    border: none;
+    cursor: pointer;
+    color: white;
+    z-index: 1000;
+}
+
+/* 🔹 Hide Hamburger Menu on Desktop */
 @media screen and (min-width: 768px) {
     #menu-toggle {
         display: none; /* Hide hamburger menu on larger screens */
@@ -78,17 +86,35 @@ header .logo {
 
     .navigation {
         display: flex !important; /* Ensure navigation is always visible */
-        flex-direction: row; /* Keep menu horizontal */
-        position: static; /* Reset positioning */
+        flex-direction: row;
+        position: static;
         width: auto;
         background: none;
         text-align: left;
     }
 }
 
+/* 🔹 Mobile-Specific Adjustments */
+@media screen and (max-width: 767px) {
+    .navigation {
+        display: none; /* Hide menu initially */
+        flex-direction: column;
+        position: absolute;
+        top: 60px;
+        left: 0;
+        width: 100%;
+        background-color: #00457c;
+        text-align: center;
+        padding: 10px 0;
+        z-index: 1000;
+    }
 
     .navigation.active {
         display: flex; /* Show menu when active */
+    }
+
+    #menu-toggle {
+        display: block; /* Show hamburger menu on mobile */
     }
 
     .navigation li {
@@ -101,18 +127,18 @@ header .logo {
         font-size: 1.5rem;
     }
 
-
-    #menu-toggle {
-        top: 15px;
-        left: 10px;
-        font-size: 28px;
-    }
-
+    /* 🔹 Ensure Title Has Space */
     header {
-        padding-top: 90px; /* Extra space for the menu */
+        padding-top: 80px; /* Extra space for menu */
     }
 
-/* Hero Section */
+    .hamburger {
+        top: 15px;  /* Adjust positioning */
+        left: 10px;
+    }
+}
+
+/* 🔹 Hero Section */
 .hero {
     position: relative;
     text-align: center;
@@ -128,7 +154,7 @@ header .logo {
     opacity: 0.85;
 }
 
-/* Hero Text */
+/* 🔹 Hero Text */
 .hero .hero-text {
     position: absolute;
     top: 50%;
@@ -149,7 +175,7 @@ header .logo {
     font-size: 1.2rem;
 }
 
-/* CTA Button */
+/* 🔹 CTA Button */
 .cta-button {
     display: inline-block;
     padding: 0.7rem 1.5rem;
@@ -165,7 +191,7 @@ header .logo {
     background-color: #ffcc00;
 }
 
-/* Footer styling */
+/* 🔹 Footer Styling */
 footer {
     text-align: center;
     padding: 15px;
