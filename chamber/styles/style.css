@@ -15,31 +15,14 @@ header {
     background-color: #00457c;
     color: #fff;
     display: flex;
-    justify-content: center; /* Centers title & logo */
+    justify-content: space-between;
     align-items: center;
-    flex-direction: column; /* Stack items */
-    text-align: center;
-    padding: 80px 20px 20px; /* Adds extra top padding */
-    position: relative; /* Ensures elements inside position correctly */
+    padding: 1rem 2rem;
 }
 
-/* 🟢 Ensure Title Has Space 🟢 */
 header h1 {
     font-size: 1.8rem;
-    margin: 10px 0 0; /* Adjust spacing to avoid overlap */
-}
-
-/* 🟢 Fix Hamburger Menu Overlap 🟢 */
-#menu-toggle {
-    position: absolute;
-    top: 20px;
-    left: 15px;
-    font-size: 30px;
-    background: none;
-    border: none;
-    cursor: pointer;
-    color: white;
-    z-index: 1100;
+    margin: 0;
 }
 
 /* Navigation */
@@ -72,16 +55,27 @@ header .logo {
     height: auto;
 }
 
-/* 🟢 Mobile Navigation - Initially Hidden 🟢 */
+/* Default navigation style - visible on larger screens */
+@media screen and (min-width: 768px) {
+    #menu-toggle {
+        display: none; /* Hide hamburger on desktop */
+    }
+    
+    .navigation {
+        display: flex; /* Ensure menu is visible */
+    }
+}
+
+/* Mobile menu - initially hidden */
 @media screen and (max-width: 767px) {
     .navigation {
-        display: none;
+        display: none; /* Hide menu initially */
         flex-direction: column;
         position: absolute;
-        top: 70px; /* Adjust for better spacing */
+        top: 60px; /* Adjust depending on header height */
         left: 0;
         width: 100%;
-        background-color: #00457c;
+        background-color: #00457c; /* Adjust background color */
         text-align: center;
         padding: 10px 0;
         z-index: 1000;
@@ -89,6 +83,19 @@ header .logo {
 
     .navigation.active {
         display: flex; /* Show menu when active */
+    }
+
+    #menu-toggle {
+        display: block; /* Show hamburger menu on mobile */
+        background: none;
+        border: none;
+        font-size: 2rem;
+        cursor: pointer;
+        color: white;
+        position: absolute;
+        left: 20px;
+        top: 15px;
+        z-index: 1100;
     }
 
     .navigation li {
@@ -100,18 +107,8 @@ header .logo {
         text-decoration: none;
         font-size: 1.5rem;
     }
-
-    /* Ensure the hamburger menu does not overlap */
-    #menu-toggle {
-        top: 15px;
-        left: 10px;
-        font-size: 28px;
-    }
-
-    header {
-        padding-top: 90px; /* Extra space for the menu */
-    }
 }
+
 
 /* Hero Section */
 .hero {
