@@ -1,14 +1,28 @@
-fetch("data/members.json")
-    .then((response) => response.json())
-    .then((data) => {
-        const spotlightContainer = document.getElementById("spotlight-cards");
+document.addEventListener("DOMContentLoaded", async function () {
+    const spotlightContainer = document.getElementById("spotlight-cards");
+
+    if (!spotlightContainer) {
+        console.error("Spotlight container not found.");
+        return; // Stop execution if the element is missing
+    }
+
+    try {
+        const response = await fetch("data/members.json");
+        if (!response.ok) throw new Error("Failed to load members data");
+
+        const data = await response.json();
 
         // Filter for Gold and Silver members
         const spotlightMembers = data.filter(
             (member) => member.membership === "Gold" || member.membership === "Silver"
         );
 
-        // Randomly select two members
+        if (spotlightMembers.length === 0) {
+            spotlightContainer.innerHTML = "<p>No spotlight members available.</p>";
+            return;
+        }
+
+        // Randomly select up to two members
         const selectedMembers = spotlightMembers.sort(() => 0.5 - Math.random()).slice(0, 2);
 
         selectedMembers.forEach((member) => {
@@ -25,5 +39,8 @@ fetch("data/members.json")
 
             spotlightContainer.appendChild(card);
         });
-    })
-    .catch((error) => console.error("Error fetching members:", error));
+    } catch (error) {
+        console.error("Error fetching members:", error);
+        spotlightContainer.innerHTML = "<p>Unable to load spotlight members.</p>";
+    }
+});
