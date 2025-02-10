@@ -55,39 +55,60 @@ header .logo {
     height: auto;
 }
 
-/* Hamburger Menu */
-.hamburger {
-    font-size: 2rem;
-    background: none;
-    border: none;
-    color: white;
-    cursor: pointer;
-    position: absolute;
-    left: 10px;
-    top: 10px;
-    display: none;
-}
-
-/* Mobile Navigation */
-@media screen and (max-width: 768px) {
-    .hamburger {
-        display: block;
+/* Default navigation style - visible on larger screens */
+@media screen and (min-width: 768px) {
+    #menu-toggle {
+        display: none; /* Hide hamburger on desktop */
     }
-
+    
     .navigation {
-        display: none;
-        flex-direction: column;
-        background: #00457c;
-        position: absolute;
-        width: 100%;
-        left: 0;
-        top: 60px;
-    }
-
-    .navigation.show {
-        display: flex;
+        display: flex; /* Ensure menu is visible */
     }
 }
+
+/* Mobile menu - initially hidden */
+@media screen and (max-width: 767px) {
+    .navigation {
+        display: none; /* Hide menu initially */
+        flex-direction: column;
+        position: absolute;
+        top: 60px; /* Adjust depending on header height */
+        left: 0;
+        width: 100%;
+        background-color: #00457c; /* Adjust background color */
+        text-align: center;
+        padding: 10px 0;
+        z-index: 1000;
+    }
+
+    .navigation.active {
+        display: flex; /* Show menu when active */
+    }
+
+    #menu-toggle {
+        display: block; /* Show hamburger menu on mobile */
+        background: none;
+        border: none;
+        font-size: 2rem;
+        cursor: pointer;
+        color: white;
+        position: absolute;
+        left: 20px;
+        top: 15px;
+        z-index: 1100;
+    }
+
+    .navigation li {
+        padding: 10px 0;
+    }
+
+    .navigation a {
+        color: white;
+        text-decoration: none;
+        font-size: 1.5rem;
+    }
+}
+
 
 /* Hero Section */
 .hero {

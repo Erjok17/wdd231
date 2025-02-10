@@ -7,7 +7,7 @@ document.addEventListener("DOMContentLoaded", function () {
 
     if (menuToggle && navigation) {
         menuToggle.addEventListener("click", function () {
-            navigation.classList.toggle("active");
+            navigation.classList.toggle("active"); // Toggle visibility
         });
     } else {
         console.error("Menu toggle button or navigation not found.");
@@ -54,4 +54,6 @@ document.addEventListener("DOMContentLoaded", function () {
     if (document.getElementById('directory')) {
         loadDirectory();
     }
+
 });
+
