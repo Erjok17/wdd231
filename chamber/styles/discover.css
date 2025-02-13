@@ -76,3 +76,45 @@
     display: block !important;
   }
   
+
+  .grid-container {
+    display: grid;
+    gap: 20px;
+    padding: 20px;
+    grid-template-areas:
+        "park museum market library"
+        "community gallery arena wildlife";
+}
+
+.card:nth-child(1) { grid-area: park; }
+.card:nth-child(2) { grid-area: museum; }
+.card:nth-child(3) { grid-area: market; }
+.card:nth-child(4) { grid-area: library; }
+.card:nth-child(5) { grid-area: community; }
+.card:nth-child(6) { grid-area: gallery; }
+.card:nth-child(7) { grid-area: arena; }
+.card:nth-child(8) { grid-area: wildlife; }
+
+@media (max-width: 640px) {
+    .grid-container {
+        grid-template-areas:
+            "park"
+            "museum"
+            "market"
+            "library"
+            "community"
+            "gallery"
+            "arena"
+            "wildlife";
+    }
+}
+
+@media (min-width: 641px) and (max-width: 1024px) {
+    .grid-container {
+        grid-template-areas:
+            "park museum"
+            "market library"
+            "community gallery"
+            "arena wildlife";
+    }
+}

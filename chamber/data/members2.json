@@ -1,0 +1,37 @@
+[
+    {
+        "name": "Local Park",
+        "image": "images/park.webp",
+        "address": "123 Park Lane, Nalyaa Estate",
+        "phone": "+256 123 456 789",
+        "website": "https://nalyaapark.com"
+    },
+    {
+        "name": "Historic Museum",
+        "image": "images/museum.webp",
+        "address": "456 Museum Road, Nalyaa Estate",
+        "phone": "+256 987 654 321",
+        "website": "https://nalyaamuseum.com"
+    },
+    {
+        "name": "Nalyaa's Market",
+        "image": "images/market.webp",
+        "address": "789 Market Street, Nalyaa Estate",
+        "phone": "+256 111 222 333",
+        "website": "https://nalyaamarket.com"
+    },
+    {
+        "name": "City Library",
+        "image": "images/library.webp",
+        "address": "321 Library Avenue, Nalyaa Estate",
+        "phone": "+256 444 555 666",
+        "website": "https://nalyaalibrary.com"
+    },
+    {
+        "name": "Community Center",
+        "image": "images/community.webp",
+        "address": "654 Center Drive, Nalyaa Estate",
+        "phone": "+256 777 888 999",
+        "website": "https://nalyaacommunity.com"
+    }
+]

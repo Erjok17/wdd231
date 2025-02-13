@@ -57,3 +57,44 @@ document.addEventListener("DOMContentLoaded", function () {
 
 });
 
+
+  /*** 🟢 DISCOVER JSON DATA LOADING 🟢 ***/
+  async function loadDiscoverData() {
+    try {
+        const response = await fetch('data/members2.json');
+        if (!response.ok) throw new Error("Failed to load discover data");
+        const members = await response.json();
+        const discoverSection = document.getElementById('discover');
+
+        if (discoverSection) {
+            discoverSection.innerHTML = ""; // Clear previous content
+            members.forEach(member => {
+                const card = document.createElement('div');
+                card.className = 'card';
+                card.innerHTML = `
+                    <img src="${member.image}" alt="${member.name}">
+                    <h3>${member.name}</h3>
+                    <p>${member.description}</p>
+                    <p><strong>Location:</strong> ${member.location}</p>
+                    <p><strong>Category:</strong> ${member.category}</p>
+                    <a href="${member.website}" target="_blank">Visit Website</a>
+                `;
+                discoverSection.appendChild(card);
+            });
+        } else {
+            console.error("Discover section not found.");
+        }
+    } catch (error) {
+        console.error("Error loading discover data:", error);
+    }
+}
+
+// Load discover data if the element exists on the page
+document.addEventListener("DOMContentLoaded", function () {
+    if (document.getElementById('discover')) {
+        loadDiscoverData();
+    }
+});
+
+  
+
