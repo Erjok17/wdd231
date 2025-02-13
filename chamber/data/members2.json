@@ -33,5 +33,26 @@
         "address": "654 Center Drive, Nalyaa Estate",
         "phone": "+256 777 888 999",
         "website": "https://nalyaacommunity.com"
+    },
+    {
+        "name": "Art Gallery",
+        "image": "images/gallery.webp",
+        "address": "123 Art Street, Nalyaa Estate",
+        "phone": "+256 700 111 222",
+        "website": "https://nalyaaartgallery.com"
+    },
+    {
+        "name": "Sports Arena",
+        "image": "images/arena.webp",
+        "address": "456 Arena Road, Nalyaa Estate",
+        "phone": "+256 711 222 333",
+        "website": "https://nalyaasportsarena.com"
+    },
+    {
+        "name": "Wildlife Reserve",
+        "image": "images/wildlife.webp",
+        "address": "789 Wildlife Park, Nalyaa Estate",
+        "phone": "+256 722 333 444",
+        "website": "https://nalyaawildlife.com"
     }
 ]
