@@ -39,7 +39,7 @@
         <h2>Join Elite Ballers Connect</h2>
         <p>Take your basketball career to the next level by joining our elite network.</p>
 
-        <form method="post" action="thankyou.html">
+        <form id="joinForm" method="post" action="thankyou.html">
             <label for="first-name">First Name:</label>
             <input type="text" id="first-name" name="first-name" autocomplete="given-name" placeholder="Enter your first name" required>
         
@@ -50,10 +50,10 @@
             <input type="email" id="email" name="email" autocomplete="email" placeholder="Enter your email address" required>
         
             <label for="phone">Phone Number:</label>
-            <input type="tel" id="phone" name="phone" autocomplete="tel" placeholder="Enter your phone number" required>
+            <input type="tel" id="phone" name="phone" autocomplete="tel" placeholder="Enter your phone number" required pattern="[0-9]{10}">
         
             <label for="membership">Choose Membership Level:</label>
-            <select id="membership" name="membership">
+            <select id="membership" name="membership" required>
                 <option value="player">Player Membership</option>
                 <option value="coach">Coach Membership</option>
                 <option value="team">Team Membership</option>
