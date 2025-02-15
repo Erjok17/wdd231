@@ -3,32 +3,48 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Elite Ballers Connect - Site Plan</title>
+    <meta name="description" content="Welcome to Elite Ballers Connect. Our basketball platform connects players, coaches, and enthusiasts to unlock opportunities and elevate the game. We help Players showcase their skills to earn scholarships, pro contracts, and financial rewards. Coaches gain access to undiscovered talent through detailed profiles, highlight reels, and performance metrics. By fostering a global community, we level the playing field, ensuring no talent goes unnoticed. Through events, resources, and innovative tools, we empower players to achieve their dreams and help coaches build stronger teams. Together, we’re redefining basketball by creating a future where talent meets opportunity, and the game thrives like never before. ">
+    <meta name="author" content="Erjok Agot Erjok">
+    <title>Elite Ballers Connect - Home</title>
+
+    <meta property="og:title" content="Elite Ballers Connect Homepage">
+    <meta property="og:type" content="website">
+    <meta property="og:image" content="https://erjok17.github.io/wdd231/project/images/ballerlogo.jpg">
+    <meta property="og:url" content="https://erjok17.github.io/wdd231/project/index.html">
+
+
+    <link rel="icon" href="images/favicon.ico">
+
     <link rel="stylesheet" href="styles/styleproject.css">
 </head>
 <body>
+    
     <header>
-        <h1>Elite Ballers Connect - Site Plan</h1>
+        <div class="left-section">
+            <img src="images/ballerlogo.jpg" alt="Elite Ballers Connect Logo" class="logo">
+            <button id="menu-toggle" class="hamburger">&#9776;</button>
+        </div>
+        <h1 class="site-title">Elite Ballers Connect</h1>
         <nav>
-            <ul>
-                <li><a href="index.html">Home</a></li>
+            <ul class="navigation">
+                <li><a href="index.html" class="active">Home</a></li>
                 <li><a href="about.html">About</a></li>
                 <li><a href="contact.html">Contact</a></li>
                 <li><a href="join.html">Join</a></li>
             </ul>
         </nav>
     </header>
-
+    
     <main>
         <!-- Hero Section -->
-        <section class="hero">
-            <img src="images/hero.png" alt="Baller's Image" class="hero-image"> 
-            <div class="hero-text">
-                <h2>Welcome to Elite Baller's Connect</h2> 
-                <p>Connecting basketball players, coaches, and enthusiasts.</p> 
-                <a href="join.html" class="cta-button">Join the network</a> 
-            </div>
-        </section>
+<section class="hero">
+    <img src="images/olivier-nkamhoua.jpg" alt="Baller's Image" class="hero-image"> 
+    <div class="hero-text">
+        <h2>Welcome to Elite Baller's Connect</h2> 
+        <p>Connecting basketball players, coaches, and enthusiasts.</p> 
+        <a href="join.html" class="cta-button">Join the network</a> 
+    </div>
+</section>
 
         <section>
             <h2>Elite Ballers Connect</h2>
@@ -57,15 +73,19 @@
             <p>Our platform is the ultimate bridge between talent and opportunity, empowering players to achieve their dreams and helping coaches and teams build winning futures. <strong>Join us and be part of a community that transforms lives through basketball.</strong></p>
         </section>
         
-
         <section class="scenario">
-            <h2>Scenarios</h2>
-            <img src="images/training-ground.png" alt="Ballers Ground" class="trainingground-image">
-            <ul>
-                <li>Where can I find basketball training tips and drills?</li>
-                <li>How do I connect with local teams and leagues?</li>
-            </ul>
+            <div class="overlay">
+                <h2>Scenarios</h2>
+                <ul>
+                    <li>Where can I find basketball training tips and drills?</li>
+                    <li>How do I connect with local teams and leagues?</li>
+                </ul>
+            </div>
+            <img src="images/training-ground.webp" alt="Ballers Ground" class="trainingground-image">
         </section>
+        
+
+        
 
         
         <section class="recruiting-video">
@@ -121,29 +141,39 @@
         
             <p>By following these guidelines, you’ll create a recruiting video that highlights your skills, impresses coaches, and opens doors to scholarships and opportunities. <strong>Your talent deserves to be seen—make it happen!</strong></p>
         </section>
+
         
-        <section>
-            <h2>Color Schema</h2>
-            <p><strong>Primary Color:</strong> Dark Blue (#0A3D91) - Used for headers and accents.<br>
-               <strong>Secondary Color:</strong> Orange (#F28C28) - Used for buttons and highlights.<br>
-               <strong>Background:</strong> Light Gray (#F5F5F5) - Used for page background.</p>
-        </section>
-
-        <section>
-            <h2>Typography</h2>
-            <p><strong>Headings:</strong> Montserrat, sans-serif<br>
-               <strong>Body Text:</strong> Roboto, sans-serif</p>
-        </section>
-
-        <section>
-            <h2>Wireframe</h2>
-            <p>Below is a simple wireframe representation of the home page layout:</p>
-            <div class="wireframes">
-                <img src="images/wireframe-mobile.png" alt="Mobile Wireframe">
-                <img src="images/wireframe-desktop.png" alt="Desktop Wireframe">
-            </div>
-        </section>
+<!-- Recruiting Profile Section -->
+<section class="recruiting-profile">
+    <img src="images/recruit-profile.jpg" alt="Recruit Profile Image" class="recruit-profile-image"> 
+    <div class="profile-text">
+        <h2>Recruiting Profile</h2> 
+        <p>Basketball recruiting is highly competitive and requires you to get access to coaches, schools that offer scholarships, and teams. 
+        This is where <strong>Elite Ballers Connect</strong> can provide you with a competitive edge and 10x your chances of getting recruited. 
+        We can connect you with many coaches, schools, and agents to help you get exposed and maximize your potential with endless opportunities. 
+        It takes less than a minute to get started with us. Be the opportunistic one and <a href="join.html" class="cta-link">click here</a>.</p>
+    </div>
     </main>
 
+    <footer>
+        <p>&copy; <span id="year"></span> Elite Baller's Connect. All rights reserved.</p>
+        <p>Erjok Agot Erjok | WDD 231</p>
+        <p>Last Updated: <span id="last-modified"></span></p>
+    
+        <!-- Social Media Links -->
+        <div class="social-media">
+            <a href="https://www.facebook.com" target="_blank" class="social-icon">
+                <img src="images/facebook.png" alt="Facebook">
+            </a>
+            <a href="https://www.instagram.com" target="_blank" class="social-icon">
+                <img src="images/instagram.jpeg" alt="Instagram">
+            </a>
+            <a href="https://www.twitter.com" target="_blank" class="social-icon">
+                <img src="images/twitter.jpeg" alt="Twitter">
+            </a>
+        </div>
+    </footer>
+    
+    <script src="scripts/project.js"></script>
 </body>
 </html>

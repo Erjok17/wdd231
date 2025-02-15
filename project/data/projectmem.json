@@ -1,0 +1,26 @@
+[
+    {
+        "name": "Bolgol Alumni" ,
+        "address": "San Francisco, California",
+        "phone": "415-789-2345",
+        "website": "https://bolgolsportshub.com",
+        "image": "images/bolgol2.jpeg",
+        "Role": "Player"
+    },
+    {
+        "name": "Team One Academy",
+        "address": "Kampala, Uganda",
+        "phone": "07563669701",
+        "website": "https://teamoneacademy.com",
+        "image": "images/team1.jpeg",
+        "Role": "Team"
+    },
+    {
+        "name": "Player-Coach Network",
+        "address": "Phoenix, Arizona",
+        "phone": "602-345-6789",
+        "website": "https://playercoachnetwork.com",
+        "image": "images/player-coach.jpeg",
+        "Role": "Coach"
+    }
+]
