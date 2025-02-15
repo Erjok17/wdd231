@@ -129,15 +129,16 @@ footer {
     padding: 10px 20px;
     font-size: 1.2rem;
     font-weight: bold;
-    color: white;
-    background: #ff9800;
+    color: #000000; /* Black text */
+    background: #ff9800; /* Orange background */
     text-decoration: none;
     border-radius: 5px;
     transition: background 0.3s ease;
 }
 
-.cta-button:hover {
-    background: #e68900;
+.cta-button:hover,
+.cta-button:focus {
+    background: #e68900; /* Slightly darker orange on hover/focus */
 }
 
 
@@ -439,12 +440,12 @@ nav ul li a:hover, nav ul li a.active {
 .card h3 {
     font-size: 1.4rem;
     margin: 15px 0 5px;
-    color: #333;
+    color: #000; /* Black for headings (AAA compliant) */
 }
 
 .card p {
     font-size: 1rem;
-    color: #666;
+    color: #444; /* Darker gray for paragraphs (AAA compliant) */
 }
 
 /* 🔹 Responsive Adjustments */
@@ -463,10 +464,6 @@ nav ul li a:hover, nav ul li a.active {
         height: 160px;
     }
 }
-
-
-
-
 /* ######################### */
 
 /* 🔹 Contact Page Layout */
